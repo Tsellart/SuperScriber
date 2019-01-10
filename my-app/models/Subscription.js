@@ -9,17 +9,16 @@ var SubscriptionSchema = new Schema({
     },
   cost: {
     type: String
-    
-  },
-  total: {
-    type: String
     },
+    type: {
+    type: String,
+    unique: true
+  }
 
   isSaved: {
     type: Boolean,
     default: false
   },
-
 });
 
 var Subscription = mongoose.model("Subscription", SubscriptionSchema);
