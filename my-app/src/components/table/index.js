@@ -4,7 +4,7 @@ import {table} from "react-materialize";
 function table() {
     return(
         
-<Table>
+<Table className = "striped">
   <thead>
     <tr>
       <th data-field="id">Name</th>
