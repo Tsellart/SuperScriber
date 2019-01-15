@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar} from "react-materialize"
+import {Navbar} from "react-materialize";
 
 
 function Navbar() {
@@ -14,3 +14,5 @@ function Navbar() {
         </nav>
     )
 }
+
+export default Navbar;
