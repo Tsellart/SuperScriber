@@ -24,7 +24,21 @@ class Subscriptions extends Component {
           </thead>
 
           <Row>
-            
+            <Col size="md-6 sm-12">
+              <List>
+                {this.state.service.length}
+              </List>
+            </Col>
+            <Col size="md-6 sm-12">
+              <List>
+                {this.state.price.length}
+              </List>
+            </Col>
+            <Col size="md-6 sm-12">
+              <List>
+                {this.state.rate.length}
+              </List>
+            </Col>
           </Row>
 
          
