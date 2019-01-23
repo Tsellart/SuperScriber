@@ -2,21 +2,19 @@ import React, { Component } from "react";
 import Jumbotron from "../Jumbotron/index";
 import Input from "../Input/index";
 import Button from "../Button/index";
-import API from "./utils/API";
-import { SubList, SubListItem } from "../SubList";
+import API from "../Util/API";
 import {Navbar, NavItem, Footer} from 'react-materialize';
-
 import { Container, Row, Col } from "../Grid/index";
+import { Link } from "react-router-dom";
 
-class App extends Component {
+
+class FormTwo extends Component {
   state = {
     Subscriptions: [],
     service: ""
   };
 
   handleInputChange = event => {
-    // Destructure the name and value properties off of event.target
-    // Update the appropriate state
     const { name, value } = event.target;
     this.setState({
       [name]: value
@@ -37,80 +35,55 @@ class App extends Component {
                 <NavItem>
                     <Link to = {'/Home'}>Sign-Out</Link>
                 </NavItem>
-                <Jumbotron>
-                    <Container>
-                        <Row>
-                            <Col size="md-12">
-                            <form>
-                                <Container>
-                                <Row>
-                                    <Col size="xs-9 sm-10">
-                                    <Input
-                                        name="service"
-                                        value={this.state.service}
-                                        onChange={this.handleInputChange}
-                                        placeholder="Service"
-                                    />
-                                    </Col>
-                                    <Col size="xs-9 sm-10">
-                                    <Input
-                                        name="price"
-                                        value={this.state.price}
-                                        onChange={this.handleInputChange}
-                                        placeholder="Price"
-                                    />
-                                    </Col>
-                                    <Col size="xs-9 sm-10">
-                                    <Input
-                                        name="rate"
-                                        value={this.state.rate}
-                                        onChange={this.handleInputChange}
-                                        placeholder="Rate"
-                                    />
-                                    </Col>
-                                </Row>
-                                <Row>
-                                <Col size="xs-3 sm-2">
-                                    <Button
-                                        onClick={this.handleFormSubmit}
-                                        type="success"
-                                        className="input-lg"
-                                    >
-                                        Search
-                                    </Button>
-                                </Col>
-                                </Row>
-                                </Container>
-                            </form>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col size="xs-12">
-                            {!this.state.service.length ? (
-                                <h1 className="text-center">No Recipes to Display</h1>
-                            ) : (
-                                <RecipeList>
-                                {this.state.recipes.map(recipe => {
-                                    return (
-                                    <RecipeListItem
-                                        key={recipe.title}
-                                        title={recipe.title}
-                                        href={recipe.href}
-                                        ingredients={recipe.ingredients}
-                                        thumbnail={recipe.thumbnail}
-                                    />
-                                    );
-                                })}
-                                </RecipeList>
-                            )}
-                            </Col>
-                        </Row>
-                    </Container>
-                </Jumbotron>
             </Navbar>
+            <Jumbotron>
+                <Container>
+                    <h1>Enter your Subscriptions!</h1>
+                    <form>
+                        <Row>
+                            <Col size="xs-9 sm-10">
+                            <Input
+                                name="service"
+                                value={this.state.service}
+                                onChange={this.handleInputChange}
+                                placeholder="Service"
+                            />
+                            </Col>
+                            <Col size="xs-9 sm-10">
+                            <Input
+                                name="price"
+                                value={this.state.price}
+                                onChange={this.handleInputChange}
+                                placeholder="Price"
+                            />
+                            </Col>
+                            <Col size="xs-9 sm-10">
+                            <Input
+                                name="rate"
+                                value={this.state.rate}
+                                onChange={this.handleInputChange}
+                                placeholder="Rate"
+                            />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col size="xs-3 sm-2">
+                                <Button
+                                    onClick={this.handleFormSubmit}
+                                    type="success"
+                                    className="input-lg"
+                                >
+                                    Submit
+                                </Button>
+                            </Col>
+                        </Row>
+                    </form>
+                </Container>
+            </Jumbotron>
+            <Footer className = "text-center" copyrights="&copy 2019 Work in Progress"></Footer>
         </div>
     );
   }
 }
 
-export default App;
+export default FormTwo;
