@@ -7,10 +7,10 @@ var SubscriptionSchema = new Schema({
     type: String,
     unique: true
     },
-  cost: {
+  price: {
     type: String
     },
-  type: {
+  rate: {
     type: String,
     unique: true
     },
