@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {Button, Navbar, NavItem, Footer, Table} from 'react-materialize';
+import {Navbar, NavItem, Footer, Table} from 'react-materialize';
 import Jumbotron from '../Jumbotron/index'
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../Grid/index";
+
 
 
 
@@ -14,7 +14,7 @@ class Subscriptions extends Component {
         <NavItem><Link to = {'/home'}>Log-Out</Link></NavItem>
       </Navbar>
       <Jumbotron>
-        <Table>
+        <Table className = "striped centered">
           <thead>
             <tr>
               <th data-field="id">Service</th>
@@ -23,26 +23,35 @@ class Subscriptions extends Component {
             </tr>
           </thead>
 
-          <Row>
-            <Col size="md-6 sm-12">
-              <List>
-                {this.state.service.length}
-              </List>
-            </Col>
-            <Col size="md-6 sm-12">
-              <List>
-                {this.state.price.length}
-              </List>
-            </Col>
-            <Col size="md-6 sm-12">
-              <List>
-                {this.state.rate.length}
-              </List>
-            </Col>
-          </Row>
-
-         
-        
+          <tbody>
+            <tr>
+              <td>
+                Netflix
+              </td>
+              <td>
+                12.00
+              </td>
+              <td>
+                Monthly
+              </td>
+            </tr>
+          </tbody>       
+        </Table>
+        <Table className="centered">
+        <thead>
+          <tr>
+            <th data-field="Cost">
+              Monthly Expense
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              $42.00
+            </td>
+          </tr>
+        </tbody>
         </Table>
       </Jumbotron>
       <Footer className = "text-center" copyrights="&copy 2019 Work in Progress"></Footer>

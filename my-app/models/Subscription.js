@@ -13,7 +13,7 @@ var SubscriptionSchema = new Schema({
   type: {
     type: String,
     unique: true
-  }
+    },
 
   isSaved: {
     type: Boolean,
