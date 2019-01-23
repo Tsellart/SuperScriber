@@ -26,7 +26,7 @@ where money is going.</h2>
         </Button>
         
       </Jumbotron>
-      <Footer className = "text-center" copyrights="&copy 2019 Work in Progress"></Footer>
+      <Footer className = "text-center" copyrights="2019 Work in Progress"></Footer>
       </div>
     );
   }

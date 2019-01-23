@@ -33,6 +33,9 @@ class FormTwo extends Component {
         <div>
             <Navbar brand='SuperScriber' right>
                 <NavItem>
+                    <Link to = {'/Subscriptions'}>My Subscriptions</Link>
+                </NavItem>
+                <NavItem>
                     <Link to = {'/Home'}>Sign-Out</Link>
                 </NavItem>
             </Navbar>
@@ -80,7 +83,7 @@ class FormTwo extends Component {
                     </form>
                 </Container>
             </Jumbotron>
-            <Footer className = "text-center" copyrights="&copy 2019 Work in Progress"></Footer>
+            <Footer className = "text-center" copyrights="2019 Work in Progress"></Footer>
         </div>
     );
   }
