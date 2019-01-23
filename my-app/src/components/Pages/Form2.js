@@ -3,7 +3,7 @@ import Jumbotron from "../Jumbotron/index";
 import Input from "../Input/index";
 import Button from "../Button/index";
 import API from "../Util/API";
-import {Navbar, NavItem, Footer} from 'react-materialize';
+import {Navbar, NavItem} from 'react-materialize';
 import { Container, Row, Col } from "../Grid/index";
 import { Link } from "react-router-dom";
 
@@ -99,7 +99,7 @@ class FormTwo extends Component {
           <div class="footer-copyright">
             <div class="container">
             © 2019 Copyright Text
-            <a class="grey-text text-lighten-4 right">Tim Sella, Josh Ragon, Eki Taula</a>
+            <p class="grey-text text-lighten-4 right">Tim Sella, Josh Ragon, Eki Taula</p>
             </div>
           </div>
         </footer>  
