@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Button, Navbar, NavItem, Footer} from 'react-materialize';
 import Jumbotron from '../Jumbotron/index'
 import { Link } from "react-router-dom";
+import './style.css';
 
 
 

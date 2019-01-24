@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {Navbar, NavItem, Footer, Table} from 'react-materialize';
-import Jumbotron from '../Jumbotron/index'
+import {Navbar, NavItem, Table, Footer} from 'react-materialize';
+import Jumbotron from '../Jumbotron/index';
 import { Link } from "react-router-dom";
 import API from "../Util/API";
 import { SubList, SubListItem } from "../SubList/index";
