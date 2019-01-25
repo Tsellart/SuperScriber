@@ -1,34 +1,27 @@
 import React from "react";
-import { Container, Row, Col } from "../Grid/index";
+import { Table } from 'react-materialize';
 
 export function SubList({ children }) {
-    return <ul className= "list-group">{children}</ul>;
+    return <Table className = 'striped centered'>{children}</Table>;
 }
 
 export function SubListItem({
-    Service,
-    Price,
-    Rate
+    service,
+    price,
+    rate
 }) {
     return (
-        <li className="list-group-item">
-            <Container>
-                <Row>
-                    <Col size="xs-4 sm-2">
-                    {Service}
-                    </Col>
-                </Row>
-                <Row>
-                    <Col size="xs-4 sm-2">
-                    {Price}
-                    </Col>
-                </Row>
-                <Row>
-                    <Col size="xs-4 sm-2">
-                    {Rate}
-                    </Col>
-                </Row>
-            </Container>
-        </li>
+        <tr>
+            <td>
+                {service.length}
+            </td>
+            <td>
+                {price.length}
+            </td>
+            <td>
+                {rate.length}
+            </td>
+        </tr>
+        
     )
 }

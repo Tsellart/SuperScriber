@@ -2,41 +2,41 @@ import React, { Component } from 'react';
 import {Navbar, NavItem, Table} from 'react-materialize';
 import Jumbotron from '../Jumbotron/index';
 import { Link } from "react-router-dom";
+import API from "../Util/API";
+import { SubList, SubListItem } from "../SubList/index";
 
 
 
 
 class Subscriptions extends Component {
+
+  state = {
+    Subscription: []
+  };
+
+  loadSubs = () => {
+    API.getSubs()
+    .then(res => this.setState({ subs: res.data }))
+    .catch(err => console.log(err));
+  }
+
+
   render() {
     return (
       <div className="App">
       <Navbar brand='SuperScriber' right>
-        <NavItem><Link to = {'/Home'}>Log-Out</Link></NavItem>
+      <NavItem>
+        <Link to = {'/Form'}>Manage Subscriptions</Link>
+      </NavItem>
+      <NavItem>
+        <Link to = {'/home'}>Log-Out</Link>
+      </NavItem>
       </Navbar>
       <Jumbotron>
-        <Table className = "striped centered">
-          <thead>
-            <tr>
-              <th data-field="id">Service</th>
-              <th data-field="name">Price</th>
-              <th data-field="price">Rate</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>
-                Netflix
-              </td>
-              <td>
-                12.00
-              </td>
-              <td>
-                Monthly
-              </td>
-            </tr>
-          </tbody>       
-        </Table>
+        <SubList>
+          <SubListItem>
+          </SubListItem>
+        </SubList>
         <Table className="centered">
         <thead>
           <tr>
@@ -64,9 +64,8 @@ class Subscriptions extends Component {
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="/Home">Home</a></li>
-                  <li><a class="grey-text text-lighten-3" href="/Form">Sign Up</a></li>
-                  <li><a class="grey-text text-lighten-3" href="/Form2">Login</a></li>
+                  <li><Link class="grey-text text-lighten-3" to = {'/Home'}>Home</Link></li>
+                  <li><Link class="grey-text text-lighten-3" to = {'/Form2'}>Add Subscriptions</Link></li>
                 </ul>
               </div>
             </div>
@@ -74,7 +73,7 @@ class Subscriptions extends Component {
           <div class="footer-copyright">
             <div class="container">
             © 2019 Copyright Text
-            <a class="grey-text text-lighten-4 right">Tim Sella, Josh Ragon, Eki Taula</a>
+            <p class="grey-text text-lighten-4 right">Tim Sella, Josh Ragon, Eki Taula</p>
             </div>
           </div>
         </footer>

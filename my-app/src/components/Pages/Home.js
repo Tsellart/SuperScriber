@@ -37,9 +37,9 @@ where money is going.</h2>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="/Home">Home</a></li>
-                  <li><a class="grey-text text-lighten-3" href="/Form">Sign Up</a></li>
-                  <li><a class="grey-text text-lighten-3" href="/Form2">Login</a></li>
+                  <li><Link class="grey-text text-lighten-3" to = {'/Form'}>Sign in</Link></li>
+                  <li><Link class="grey-text text-lighten-3" to = {'/Form2'}>Add Subscriptions</Link></li>
+                  <li><Link class="grey-text text-lighten-3" to = {'/Subscriptions'}>Subscriptions</Link></li>
                 </ul>
               </div>
             </div>
@@ -47,7 +47,7 @@ where money is going.</h2>
           <div class="footer-copyright">
             <div class="container">
             © 2019 Copyright Text
-            <a class="grey-text text-lighten-4 right">Tim Sella, Josh Ragon, Eki Taula</a>
+            <p class="grey-text text-lighten-4 right">Tim Sella, Josh Ragon, Eki Taula</p>
             </div>
           </div>
         </footer>
