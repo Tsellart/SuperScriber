@@ -15,7 +15,7 @@ var ItemsSchema = new Schema({
     type: String,
     unique: true
   },
-  dDate: {
+  rate: {
     type: String,
     unique: true
   },

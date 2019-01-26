@@ -18,8 +18,7 @@ function getResults() {
         userName: $("#userName").val(),
         service: $("#service").val(),
         price: $("#price").val(),
-        date: $("#date").val(),
-        category: $("#category").val(),
+        rate: $("#rate").val(),
         created: Date.now()
       }
     })
@@ -29,8 +28,7 @@ function getResults() {
       $("#userName").val("");
       $("#service").val("");
       $("#price").val("");
-      $("#dDate").val("");
-      $("#category").val("");
+      $("#rate").val("");
     });
   });
   $("#clear-all").on("click", function() {
@@ -55,8 +53,7 @@ function getResults() {
         $("#userName").val("");
         $("#service").val("");
         $("#price").val("");
-        $("#dDate").val("");
-        $("#category").val("");
+        $("#rate").val("");
         $("#action-button").html("<button id='make-new'>Submit</button>");
       }
     });
@@ -71,8 +68,7 @@ function getResults() {
         $("#userName").val(data.userName);
         $("#service").val(data.service);
         $("#price").val(data.price);
-        $("#dDate").val(data.dDate);
-        $("#category").val(data.category);
+        $("#rate").val(data.rate);
         $("#action-button").html("<button id='updater' data-id='" + data._id + "'>Update</button>");
       }
     });
@@ -88,15 +84,13 @@ function getResults() {
         userName: $("#title").val(),
         service: $("#service").val(),
         price: $("#price").val(),
-        dDate: $("#dDate").val(),
-        category: $("#category").val(),
+        rate: $("#rate").val(),
       },
       success: function(data) {
         $("#userName").val("");
         $("#service").val("");
         $("#price").val("");
-        $("#dDate").val("");
-        $("#category").val("");
+        $("#rate").val("");
         $("#action-button").html("<button id='make-new'>Submit</button>");
         getResults();
       }
