@@ -1,3 +1,4 @@
 module.exports = {
-  Article: require("./Subscription"),
+  Items: require("./Items"),
+  Users: require("./Users"),
 };

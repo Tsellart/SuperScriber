@@ -15,8 +15,11 @@ function getResults() {
       dataType: "json",
       url: "/submit",
       data: {
-        title: $("#title").val(),
-        note: $("#note").val(),
+        userName: $("#userName").val(),
+        service: $("#service").val(),
+        price: $("#price").val(),
+        date: $("#date").val(),
+        category: $("#category").val(),
         created: Date.now()
       }
     })
