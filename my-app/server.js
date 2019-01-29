@@ -22,8 +22,9 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-requirePath({
-  path: path.join(__dirname, ''),
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./src/components/pages/Form2.js"));
+});
 
 app.use(axios.json());
 app.use(axios.urlencoded({ extended: true }));
